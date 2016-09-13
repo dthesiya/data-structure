@@ -11,15 +11,7 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4a17008-7b85-4dcd-935e-0856397a9334" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/data-structure.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/linked_list/cycle detection.cpp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="" />
-    </list>
+    <list default="true" id="c4a17008-7b85-4dcd-935e-0856397a9334" name="Default" comment="" />
     <ignored path="data-structure.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -358,12 +350,12 @@
       <workItem from="1473715952999" duration="12000" />
       <workItem from="1473715986642" duration="832000" />
       <workItem from="1473730733048" duration="7000" />
-      <workItem from="1473730825586" duration="282000" />
+      <workItem from="1473730825586" duration="327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3868000" />
+    <option name="totallyTimeSpent" value="3913000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
