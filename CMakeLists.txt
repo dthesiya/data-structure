@@ -29,6 +29,9 @@ set(SOURCE_FILES
     stack/stack_using_array.c
     stack/stack_using_linkedlist.c
     stack/stack_using_two_queue.cpp
-    stack/virtual_function.cpp)
+    stack/virtual_function.cpp
+        Binary Search Tree/binary_search_tree.cpp
+    CMakeLists.txt
+    README.md)
 
 add_executable(data_structure ${SOURCE_FILES})
