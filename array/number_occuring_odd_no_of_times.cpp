@@ -6,7 +6,8 @@
 
 using namespace std;
 
-
+/*
+// using simple iteration - O(nlogn)
 int odd_occurance(int A[], int n)
 {
   sort(A, A+n);
@@ -22,13 +23,24 @@ int odd_occurance(int A[], int n)
   }
   return 0;
 }
+*/
 
+// using XOR - O(n)
+int odd_using_xor(int A[], int n)
+{
+  int result=0;
+  for (int i=0; i<n; i++)
+  {
+    result = result ^ A[i];
+  }
+  return result;
+}
 
 int main()
 {
-  int A[] = {1,2,1,2,3,3,3,2,2,2};
+  int A[] = {2, 3, 5, 4, 5, 2, 4, 3, 5, 2, 4, 4, 2, 5, 3};
   int n = sizeof(A)/ sizeof(A[0]);
-  int number = odd_occurance(A,n);
+  int number = odd_using_xor(A,n);
   if (number == 0)
   {
     cout << "None" << endl;
