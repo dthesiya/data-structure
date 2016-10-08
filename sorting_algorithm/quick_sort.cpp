@@ -4,11 +4,14 @@
 
 #include <iostream>
 #include <algorithm>
+#include <random>
 
 using namespace std;
 
 int Partition(int *A, int start, int end)
 {
+  int pivotindex = start + rand()%(end - start +1);
+  swap(A[pivotindex], A[end]);
   int pivot = A[end];
   int partitionindex = start;
   for (int i=start ; i<end ; i++)
