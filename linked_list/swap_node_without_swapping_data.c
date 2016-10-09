@@ -1,5 +1,5 @@
 //
-// Created by Priyank Vora on 10/8/16.
+// Created by Priyank Vora on 10/9/16.
 //
 
 #include<stdio.h>
@@ -47,30 +47,48 @@ void Print()
   printf("\n");
 }
 
-void Delete(struct Node *head, int key)
+void SwapNode(struct Node *head, int A, int B)
 {
-  struct Node *temp = head;
-  struct Node *prev = head;
-  int counter = 0;
-  if (key == 0)
+  if (A==B)
+    return;
+  struct Node *prevA = NULL;
+  struct Node *currentA = head;
+  while (currentA && currentA->data != A)
   {
-    head = temp->next;
-    free(temp);
-  }
-  while(temp != NULL)
-  {
-    if (counter == key)
-    {
-      prev->next = temp->next;
-      free(temp);
-      break;
-    }
-    prev = temp;
-    temp = temp->next;
-    counter++;
+    prevA = currentA;
+    currentA = currentA->next;
   }
 
+  struct Node *prevB = NULL;
+  struct Node *currentB = head;
+  while (currentB && currentB->data != B)
+  {
+    prevB = currentB;
+    currentB = currentB->next;
+  }
+
+  if (prevA != NULL)
+  {
+    prevA->next = currentB;
+  }
+  else
+  {
+    head = currentB;
+  }
+
+  if (prevB != NULL)
+  {
+    prevB->next = currentA;
+  }
+  else
+  {
+    head = currentA;
+  }
+  struct Node *temp = currentB->next;
+  currentB->next = currentA->next;
+  currentA->next = temp;
 }
+
 int main()
 {
   head = NULL;
@@ -78,11 +96,10 @@ int main()
   Insert(3,2);
   Insert(4,1);
   Insert(5,2);
-  Insert(6,2);
-  Insert(7,2);
   Insert(8,2);
+  Insert(9,2);
   Print();
-  Delete(head, 6);
+  SwapNode(head, 3, 5);
   Print();
   return 0;
 }
