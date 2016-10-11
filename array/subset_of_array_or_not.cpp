@@ -4,9 +4,12 @@
 
 #include <iostream>
 #include <algorithm>
+#include <unordered_map>
 
 using namespace std;
 
+/*
+// time complexity = O(nlogn + mlogm)
 bool IsSubset(int A[], int B[], int n, int m)
 {
   int i=0, j=0;
@@ -33,14 +36,40 @@ bool IsSubset(int A[], int B[], int n, int m)
   else
     return true;
 }
+*/
 
+// use hashing to get complexity = O(1)
 
+bool IsSubset(int A[], int B[], int n, int m)
+{
+  int i=0, j=0;
+  unordered_map<int, unsigned int> mapA;
+  if (m == 0)
+    return true;
+  if (n<m)
+    return false;
+  for (i=0; i<n; i++)
+  {
+    mapA[A[i]]++;
+  }
+  for (i=0; i<m; i++)
+  {
+    if (mapA[B[i]] == 0)
+    {
+      mapA.clear();
+      return false;
+    }
+    mapA[B[i]]--;
+  }
+  mapA.clear();
+  return true;
+}
 
 
 int main()
 {
   int A[] = {1,2,3,4,5};
-  int B[] = {2,3};
+  int B[] = {2,3,6};
   int n = sizeof(A)/ sizeof(A[0]);
   int m = sizeof(B)/ sizeof(B[0]);
   if(IsSubset(A, B, n, m))
