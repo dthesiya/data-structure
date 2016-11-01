@@ -29,7 +29,7 @@ bool IsCompressed(string str)
 
 int main()
 {
-  string str = "aabcccccaa";
+  string str = "aabccccca";
   if(IsCompressed(str))
     cout << "yess" << endl;
   else
