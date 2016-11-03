@@ -26,7 +26,7 @@ int FindMin(int A[], int start, int end)
 
 int main()
 {
-  int A[] = {5,1,r2,3,4};
+  int A[] = {5,1,2,3,4};
   int n = sizeof(A)/ sizeof(A[0]);
   int result = FindMin(A, 0, n-1);
   cout << "Result = " << result << endl;
