@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <string.h>
 
+// worst case complexity is O(m(n-m+1))
+
 void search_pattern(char *text, char *pat)
 {
   int M = strlen(text);
