@@ -3,6 +3,6 @@ project(data_structure C CXX)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES array/merge_two_sorted_array_with_space_O1.cpp)
+set(SOURCE_FILES Algorithm/little_endian_or_big_endian.cpp)
 
 add_executable(data_structure ${SOURCE_FILES} )
