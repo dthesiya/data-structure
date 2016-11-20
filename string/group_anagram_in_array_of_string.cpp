@@ -14,18 +14,27 @@ vector<string> Group_Anagram(string list[], int n)
   vector<string> res;
   for(int i=0; i<n; i++)
   {
+    int counter = 0;
     int sum = 0;
     for( int j=0; j<list[i].length(); j++)
     {
       sum += list[i][j];
-      if(hashmap.find(sum) != hashmap.end())
+      counter++;
+      if (counter == list[i].length())
       {
-        res.push_back(list[hashmap[sum]]);
-        res.push_back(list[i]);
-      }
-      else
-      {
-        hashmap[sum] = i;
+        counter = 0;
+        if(hashmap.find(sum) != hashmap.end())
+        {
+          if(list[i].length() == list[hashmap[sum]].length())
+          {
+            res.push_back(list[hashmap[sum]]);
+            res.push_back(list[i]);
+          }
+        }
+        else
+        {
+          hashmap[sum] = i;
+        }
       }
     }
   }
@@ -41,7 +50,7 @@ vector<string> Group_Anagram(string list[], int n)
 
 int main()
 {
-  string list[] = {"cat", "dog", "tac", "gdo", "priyank"};
+  string list[] = {"cat", "dog", "tac", "god", "priyank"};
   int n = sizeof(list)/ sizeof(list[0]);
   vector<string> result = Group_Anagram(list, n);
   vector<string>::iterator it;
