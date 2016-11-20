@@ -6,12 +6,13 @@
 
 int main()
 {
-  File *fp;
+  char c;
+  FILE *fp;
   fp = fopen(__FILE__, "r");
   do{
-    char c = getc(fp);
-    putc(c);
+    c = getc(fp);
+    putchar(c);
   }
-  while (c != EOF));
+  while (c != EOF);
   return 0;
 }
