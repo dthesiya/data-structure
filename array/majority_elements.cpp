@@ -57,10 +57,10 @@ bool IsMajority(int A[], int n, int candidate)
   for (int i=0; i<n; i++)
     if (A[i] == candidate)
       count++;
-    if(count>(n/2))
-      return true;
-    else
-      return false;
+  if(count>(n/2))
+    return true;
+  else
+    return false;
 }
 
 void PrintMajority(int A[], int n)
@@ -75,7 +75,7 @@ void PrintMajority(int A[], int n)
 
 int main()
 {
-  int A[] = {2,2,23,4,4};
+  int A[] = {3 ,3 ,4 ,2 ,4 ,4 ,2 ,4};
   int n = sizeof(A)/ sizeof(A[0]);
   /*int number = Majority_element(A,n);
   if (number == 0)
