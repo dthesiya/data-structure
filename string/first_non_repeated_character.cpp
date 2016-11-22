@@ -37,14 +37,7 @@ char First_non_repeat(char *str, int n)
   map<char,int> hashmap;
   for(int i=0; i<n; i++)
   {
-    if(hashmap.find(str[i]) != hashmap.end())
-    {
-      hashmap[str[i]]++;
-    }
-    else
-    {
-      hashmap[str[i]]++;
-    }
+    hashmap[str[i]]++;
   }
   for(int i=0; i<n; i++)
   {
@@ -55,7 +48,7 @@ char First_non_repeat(char *str, int n)
 
 int main()
 {
-  char str[] = "abacdcdc";
+  char str[] = "abbacdcdcef";
   char res = First_non_repeat(str, strlen(str));
   cout << res << endl;
   return 0;
