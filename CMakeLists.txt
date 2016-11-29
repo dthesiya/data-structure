@@ -3,6 +3,6 @@ project(data_structure C CXX)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES array/find_pair_with_sum_closest_to_x.cpp)
+set(SOURCE_FILES Algorithm/find_nth_magic_no.cpp)
 
 add_executable(data_structure ${SOURCE_FILES} )
