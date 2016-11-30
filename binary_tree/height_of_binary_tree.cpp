@@ -40,6 +40,9 @@ Node* Insert(Node* root, int data)
 }
 
 // time = O(n)
+// in this case we will find true height because it counts no of edges from leaf ro root due to return -1.
+// if we provided return 0 then it gives no of vertices from leaf to root.
+
 int Height_BT(struct Node *root)
 {
   if(root == NULL)
