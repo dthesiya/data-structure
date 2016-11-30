@@ -1,2 +1,2 @@
 # data-structure
-data structure implementation - linked list, stack, queue in c/c++
+data structure implementation - linked list, stack, queue, Tree in c/c++
