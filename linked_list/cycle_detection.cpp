@@ -34,3 +34,26 @@ bool has_cycle(Node* head)
   }
   while (true);
 }
+
+// using hashmap =
+
+bool has_cycle(Node* head) {
+  struct Node * temp = head;
+  if (temp == NULL)
+    return false;
+
+  map<struct Node*, int> hashmap;
+  while(temp != NULL)
+  {
+    if(hashmap.find(temp) != hashmap.end())
+    {
+      return true;
+    }
+    else
+    {
+      hashmap[temp];
+    }
+    temp = temp->next;
+  }
+  return false;
+}
