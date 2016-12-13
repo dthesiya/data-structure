@@ -87,3 +87,6 @@ int main()
 
   return 0;
 }
+
+// we can also find median of array and then see if median repeates more than half of elements times then it is majority. so if
+// the element occurs more than n/2 times in A then it must be the median of A.  but reverse is not true.
