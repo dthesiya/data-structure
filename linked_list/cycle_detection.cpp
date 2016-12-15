@@ -42,18 +42,32 @@ bool has_cycle(Node* head) {
   if (temp == NULL)
     return false;
 
-  map<struct Node*, int> hashmap;
+  unordered_set<struct Node*> hashset;
   while(temp != NULL)
   {
-    if(hashmap.find(temp) != hashmap.end())
+    if(hashset.find(temp) != hashset.end())
     {
       return true;
     }
     else
     {
-      hashmap[temp];
+      hashset.insert(temp);
     }
     temp = temp->next;
   }
   return false;
 }
+
+// cycle removal
+/*
+if(slow == fast)
+{
+  slow = head;
+  while(slow ! = fast->next)
+  {
+    slow = slow->next;
+    fast = fast->next;
+  }
+  fast->next = NULL;
+}
+*/
