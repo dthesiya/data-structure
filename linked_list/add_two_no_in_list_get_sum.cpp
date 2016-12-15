@@ -32,7 +32,7 @@ struct Node *Add_two_no(struct Node *first, struct Node* second)
     if(first)
       first = first->next;
     if(second)
-      second - second->next;
+      second = second->next;
   }
 
   if(carry > 0)
