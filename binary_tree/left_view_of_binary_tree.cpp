@@ -79,6 +79,7 @@ void LeftView(Node *root)
 }
 
 // simple recursive traversal - keep track of both variable max and level
+/*
 void LeftView1(struct Node *root, int level, int *max)
 {
   if (root == NULL)
@@ -91,7 +92,7 @@ void LeftView1(struct Node *root, int level, int *max)
   LeftView1(root->left,level+1, max);
   LeftView1(root->right, level+1, max);
 }
-
+*/
 int main()
 {
   Node *root = NULL;
