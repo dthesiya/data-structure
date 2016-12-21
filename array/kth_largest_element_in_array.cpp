@@ -6,6 +6,9 @@
 
 using namespace std;
 
+
+
+ // heap solution
 void heapify(int arr[], int i, int size)
 {
   int largest = i;
@@ -54,3 +57,29 @@ int main()
 
   return 0;
 }
+
+
+ // priority queue = O(n)
+ int findkthlargest(int arr[], int k)
+ {
+   priority_queue<int> pq(arr.begin(), nums.end());
+   for(int i=0; i<k-1; i++)
+   {
+     pq.pop();
+   }
+   return pq.top();
+ }
+
+ // multiset = O(n)
+ int findkthlargest(int arr[], int k)
+ {
+   multiset<int> mset;
+   int n = arr.size();
+   for(int i=0; i<n; i++)
+   {
+     mset.insert(arr[i]);
+     if(mset.size > k)
+       mset.erase(mset.begin());
+   }
+   return *mset.begin();
+ }
