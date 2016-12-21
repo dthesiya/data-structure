@@ -13,16 +13,14 @@ using namespace std;
 
 int MSS(int A[], int n)
 {
-  int sum = 0, maxi = 0;
-  for (int i = 0; i < n; i++)
+  int ans=A[0], sum=0;
+  for(int i=0; i<n; i++)
   {
-    if ((sum+A[i]) > 0)
-      sum = sum + A[i];
-    else
-      sum = 0;
-    maxi = max(sum, maxi);
+    sum = sum + A[i];
+    ans = max(ans,sum);
+    sum = max(sum,0);
   }
-  return maxi;
+  return ans;
 }
 
 

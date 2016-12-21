@@ -3,6 +3,6 @@ project(data_structure C CXX)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES dynamic_programming/longest_common_substring.cpp)
+set(SOURCE_FILES array/maximum_sum_subarray.cpp)
 
 add_executable(data_structure ${SOURCE_FILES} )
