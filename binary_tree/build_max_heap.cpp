@@ -40,7 +40,7 @@ void build_heap(int arr[])
 {
   int length = sizeof(arr)/ sizeof(arr[0]);
   int heapsize = length;
-  for(int i=length/2; i>=1; i--)
+  for(int i=length-1/2; i>=1; i--)
   {
     Max_Heap(arr, i, heapsize);
   }
