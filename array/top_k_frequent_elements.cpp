@@ -40,7 +40,7 @@ vector<int> find_kth_top(vector<int>& nums, int k)
 
 int main()
 {
-  vector<int> A = {1,2,1,3,2};
+  vector<int> A = {1,3,3,2,1,1};
   vector<int> res = find_kth_top(A, 2);
   for(auto i : res)
   {

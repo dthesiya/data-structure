@@ -4,57 +4,35 @@
 
 #include <iostream>
 #include <vector>
-#include <map>
 
 using namespace std;
 
-vector<string> Group_Anagram(string list[], int n)
+bool cmp(pair<int, string> a, pair<int, string> b)
 {
-  map<int, int> hashmap;
-  vector<string> res;
-  for(int i=0; i<n; i++)
+  return a.second < b.second;
+}
+
+void Group_Anagram(vector<string> &A)
+{
+  vector<pair<int, string>> dup;
+  for(int i=0; i<A.size(); i++)
   {
-    int counter = 0;
-    int sum = 0;
-    for( int j=0; j<list[i].length(); j++)
-    {
-      sum += list[i][j];
-      counter++;
-      if (counter == list[i].length())
-      {
-        counter = 0;
-        if(hashmap.find(sum) != hashmap.end())
-        {
-          if(list[i].length() == list[hashmap[sum]].length())
-          {
-            res.push_back(list[hashmap[sum]]);
-            res.push_back(list[i]);
-          }
-        }
-        else
-        {
-          hashmap[sum] = i;
-        }
-      }
-    }
+    string temp = A[i];
+    sort(temp.begin(), temp.end());
+    dup.push_back(make_pair(i, temp));
   }
-  for(int i=0; i<n; i++)
+
+  sort(dup.begin(), dup.end(), cmp);
+
+  for(int i=0; i<dup.size(); i++)
   {
-    if(find(res.begin(), res.end(), list[i]) == res.end())
-    {
-      res.push_back(list[i]);
-    }
+    cout << A[dup[i].first] << " ";
   }
-  return res;
 }
 
 int main()
 {
-  string list[] = {"cat", "dog", "tac", "god", "priyank"};
-  int n = sizeof(list)/ sizeof(list[0]);
-  vector<string> result = Group_Anagram(list, n);
-  vector<string>::iterator it;
-  for(it=result.begin(); it != result.end(); ++it)
-    cout << *it << " ";
+  vector<string> A= {"cat", "dog", "tac", "god", "priyank"};
+  Group_Anagram(A);
   return 0;
 }
