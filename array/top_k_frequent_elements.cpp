@@ -16,7 +16,7 @@ vector<int> find_kth_top(vector<int>& nums, int k)
   for(auto i : nums)
   {
     hashmap[i]++;
-  }
+  }s
   for(auto & i : hashmap)
   {
     pq.push(i.second);
