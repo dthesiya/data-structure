@@ -12,7 +12,7 @@ int FindMedian(int A[], int B[], int size)
 {
   int i=0, j=0, k=0;
   int C[2*size];
-  while (i<size)
+  while (i<size+1)
   {
     if (k > size)
       return (C[k-1]+C[k-2]);
