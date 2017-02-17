@@ -58,7 +58,6 @@ int main()
   root->right = Getnewnode(22);
   root->left->left = Getnewnode(5);
   root->left->right = Getnewnode(3);
-  root->right->left = Getnewnode(4);
   root->right->right = Getnewnode(25);
   root->left->right->left = Getnewnode(10);
   root->left->right->right = Getnewnode(14);
